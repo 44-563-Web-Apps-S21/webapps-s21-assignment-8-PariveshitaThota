@@ -9,11 +9,14 @@ const server =
       res.statusCode = 200      //code for OK
       res.setHeader('Content-Type', 'text/html') //Set the mime type HTML
 
-      res.write('<html> <head> <title> Served </title> </head>')
+      res.write('<html> <head> <title> table </title> </head>')
       res.write('<body>')
-      res.write('Content \n')
-      res.write('More content \n')
-      res.write('Hello World')    
+      res.write('<table>')
+      res.write('<tr><th>LOCATION</th>')
+      res.write('<th>Hours</th><th>Amount</th></tr>') 
+      res.write('<tr><td>NewYork</td><td>10</td><td>300</td></tr>')   
+      res.write('</table>')
+
       res.end('</body></html>')
       //Close the response
     }                           
